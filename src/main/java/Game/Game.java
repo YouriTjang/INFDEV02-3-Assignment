@@ -32,13 +32,14 @@ public class Game extends Application{
         Scene theScene = new Scene( root );
         stage.setScene( theScene );
 
-        Canvas canvas = new Canvas( 800, 800 );
+        final Canvas canvas = new Canvas( 800, 800 );
         root.getChildren().add( canvas );
 
-        GraphicsContext gc = canvas.getGraphicsContext2D();
+        final GraphicsContext gc = canvas.getGraphicsContext2D();
 
         loadContent();
         stage.show();
+
         //this acts as the main loop
         new AnimationTimer(){
             public void handle(long currentNanoTime){
